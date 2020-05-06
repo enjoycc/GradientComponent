@@ -1,0 +1,2 @@
+include ':app', ':gradientlibrary'
+rootProject.name='GradientComponent'
