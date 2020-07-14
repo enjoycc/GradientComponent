@@ -12,18 +12,18 @@ public class ColorUtils {
      * @param c 色值
      * @return
      */
-    public static int getDarkColors(int c) {
+    public static int getDarkColor(int c) {
         return (c & 0xff000000)
                 + (((c & 0xff0000) - 0x140000) > 0 ? ((c & 0xff0000) - 0x140000) : 0)
                 + (((c & 0x00ff00) - 0x001400) > 0 ? ((c & 0x00ff00) - 0x001400) : 0)
                 + (((c & 0x0000ff) - 0x000014) > 0 ? ((c & 0x0000ff) - 0x000014) : 0);
     }
 
-    public static int[] getDarkColor(int[] c) {
+    public static int[] getDarkColors(int[] c) {
         if (null == c) return null;
         int[] cs = new int[c.length];
         for (int i = 0; i < c.length; i++) {
-            cs[i] = getDarkColors(c[i]);
+            cs[i] = getDarkColor(c[i]);
         }
         return cs;
     }
@@ -72,4 +72,5 @@ public class ColorUtils {
         }
         return cs;
     }
+
 }

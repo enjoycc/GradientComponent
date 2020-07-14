@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_main_dark">#ff9900</color>
+    <color name="color_main_dark_alpha_20">#33ff9900</color>
+    <color name="color_main_dark_press">#eb8500</color>
+    <color name="color_main_light">#ffc123</color>
+    <color name="color_main_light_alpha_20">#33ffc123</color>
+    <color name="color_main_light_press">#ebad0f</color>
+    <color name="color_white">#ffffff</color>
+    <color name="color_black">#000000</color>
+</resources>

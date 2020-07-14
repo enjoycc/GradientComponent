@@ -1,18 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="20dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            style="@style/Gradient.Button.Small"
+            android:layout_margin="10dp"
+            android:text="正常的小按钮" />
+
+        <Button
+            style="@style/Gradient.Button.Medium"
+            android:layout_margin="10dp"
+            android:text="正常的中按钮" />
+
+        <Button
+            style="@style/Gradient.Button.Large"
+            android:layout_margin="10dp"
+            android:text="正常的大按钮" />
+
+        <Button
+            style="@style/Gradient.Button.Small"
+            android:layout_margin="10dp"
+            android:text="被禁用的小按钮"
+            android:enabled="false"/>
+
+
+        <Button android:id="@+id/button_1"
+            style="@style/Gradient.Button.Small"
+            android:layout_margin="10dp"
+            android:text="正常的小按钮" />
+
+        <Button android:id="@+id/button_2"
+            style="@style/Gradient.Button.Medium"
+            android:layout_margin="10dp"
+            android:text="正常的中按钮" />
+
+        <Button android:id="@+id/button_3"
+            style="@style/Gradient.Button.Large"
+            android:layout_margin="10dp"
+            android:text="正常的大按钮" />
+
+        <Button
+            android:id="@+id/button_4"
+            style="@style/Gradient.Button.Small"
+            android:layout_margin="10dp"
+            android:text="被禁用的小按钮"
+            android:enabled="false"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是图片的原色："/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/gift"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是用tint属性染色的图片(api需要大于21才生效)："/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/gift"
+            android:tint="@color/color_main_light_press"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="这是用代码给drawable染色的图片："/>
+        <ImageView
+            android:id="@+id/gift"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/gift"/>
+
+
+    </LinearLayout>
+</ScrollView>
